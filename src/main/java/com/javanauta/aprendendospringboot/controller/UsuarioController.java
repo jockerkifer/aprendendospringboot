@@ -46,7 +46,7 @@ public class UsuarioController  {
 		return jwtUtil.generateToken(authentication.getName());
 	}	
 	
-	@GetMapping
+	 @GetMapping
 	public ResponseEntity<Usuario> buscarEmailUsuario(@RequestParam String email){
 		return ResponseEntity.ok(usuarioService.buscarEmailUsuario(email));
 	}
@@ -57,6 +57,4 @@ public class UsuarioController  {
 		return ResponseEntity.ok().build();
 		
 	}
-		
-		
 }
